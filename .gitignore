@@ -1,0 +1,7 @@
+node_modules
+tempCodeRunner.js
+Desktop.ini
+.DS_Store
+Thumbs.db
+.nyc_output
+coverage

@@ -1,5 +1,5 @@
 /**
- *      Randomized Numeric Array generator
+ *      Numeric Array generator
  */
 
 const  generateNumericArray = (max = 99, shuffle = false) => {

@@ -1,5 +1,5 @@
 /**
- *      Randomized Numeric Array generator
+ *      Numeric Array generator
  */
 
 const chai = require('chai')

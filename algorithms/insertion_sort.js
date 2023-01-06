@@ -2,6 +2,8 @@
  *      Insertion Sort
  */
 
+const { generateNumericArray } = require('../helpers/numeric_array_generator')
+
 const insertionSort = array => {
     for (let i = 1; i < array.length; i++) {
         let j = i
@@ -14,5 +16,5 @@ const insertionSort = array => {
 }
 
 module.exports = {
-    insertionSort,
+    insertionSort
 }

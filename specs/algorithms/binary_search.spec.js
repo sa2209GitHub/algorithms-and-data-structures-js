@@ -1,5 +1,5 @@
 /**
- *      Binary Search:
+ *      Binary Search
  *      Iterative and Recursive solutions
  */
 
@@ -13,14 +13,14 @@ describe ('Binary search', () => {
 
     describe ('Iterative fubction', () => {
         it ('Should return correct Array index or \'not found\' message', () => {
-            assert.equal(binarySearchIterative(array, 10), '10: not found')
+            assert.equal(binarySearchIterative(array, 42), '42: not found')
             assert.equal(binarySearchIterative(array, 101), 3)
             assert.equal(binarySearchIterative(array, 5555), 5457)
         })
     })
     describe('Recursive function', () => {
         it ('Should return correct Array index or \'not found\' message', () => {
-            assert.equal(binarySearchRecursive(array, 10), '10: not found')
+            assert.equal(binarySearchRecursive(array, 42), '42: not found')
             assert.equal(binarySearchRecursive(array, 101), 3)
             assert.equal(binarySearchRecursive(array, 5555), 5457)
         })

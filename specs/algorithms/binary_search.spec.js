@@ -5,7 +5,7 @@
 
 const chai = require('chai')
 const assert = chai.assert
-const { binarySearchIterative, binarySearchRecursive } = require('../../algorithms/1_binary_search')
+const { binarySearchIterative, binarySearchRecursive } = require('../../algorithms/binary_search')
 
 describe ('Binary search', () => {
     const array = []

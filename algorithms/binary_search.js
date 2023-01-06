@@ -11,8 +11,8 @@ const binarySearchIterative = (array, value) => {
         let mid = Math.round((low + high) / 2)
         
         switch (true) {
-            case value > array[mid]: low = mid + 1  ;   break
-            case value < array[mid]: high = mid - 1 ;   break
+            case value > array[mid]: low = mid + 1;     break
+            case value < array[mid]: high = mid - 1;    break
             default: return mid
         }
     }

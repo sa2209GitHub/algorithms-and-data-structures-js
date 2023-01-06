@@ -1,6 +1,5 @@
 /**
- *      Binary Search
- *      Iterative and Recursive Solutions
+ *      Binary Search. Iterative and Recursive Solutions
  */
 
 const binarySearchIterative = (array, value) => {

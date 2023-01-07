@@ -38,7 +38,3 @@ const merge = (firstArray, secondArray) => {
 module.exports = {
     mergeSort
 }
-
-module.exports = {
-    mergeSort
-}

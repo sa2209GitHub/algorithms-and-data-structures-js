@@ -12,6 +12,7 @@ const insertionSort = array => {
             j--
         }
     }
+    
     return array
 }
 

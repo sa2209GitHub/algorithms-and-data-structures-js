@@ -12,6 +12,3 @@ const javascriptSort = array => {
 module.exports = {
     javascriptSort
 }
-
-const arr = generateRandomizedArray(-10, 10, 99)
-console.log(javascriptSort(arr))

@@ -54,6 +54,3 @@ const heapify = (array, size, node) => {
 module.exports = {
     heapSort
 }
-
-const arr = generateRandomizedArray(-10, 10, 99)
-console.log(heapSort(arr))

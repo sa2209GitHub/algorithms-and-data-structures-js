@@ -21,6 +21,3 @@ const bubbleSort = array => {
 module.exports = {
     bubbleSort
 }
-
-const arr = generateRandomizedArray(-10, 10, 99)
-console.log(bubbleSort(arr))

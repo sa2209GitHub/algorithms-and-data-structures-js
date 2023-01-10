@@ -1,5 +1,5 @@
 /**
- *      Merge Sort
+ *      JavaScript Sort
  */
 
 const chai = require('chai')

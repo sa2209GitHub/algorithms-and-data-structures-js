@@ -2,28 +2,20 @@
  *      Quick Sort
  */
 
-const { generateArray } = require('../helpers/array_generator')
-const { swap } = require('../helpers/swap_two_array_elements')
-
-// This function takes last element as pivot, places
-// the pivot element at its correct position in sorted
-// array, and places all smaller (smaller than pivot)
-// to left of pivot and all greather elements to right
-// of pivot
-const partition = (array, low, high) => {
-
-}
+const { generateArrat } = require('../helpers/array_generator')
+const { generateRandomizedArray } = require('../helpers/randomized_array_generator')
+const { swap } = require('../helpers/generic_swap')
 
 const quickSort = array => {
-    return array
+    if (array.length <= 1) return array
+
+    let pivot = array[array.length - 1]
+    let left = array.filter(el => el < pivot)
+    let middle = array.filter(el => el === pivot)
+    let right = array.filter(el => el > pivot)
+
+    return [ ...quickSort(left), ...middle, ...quickSort(right) ]
 }
-
-
-
-const arr = generateArray(0, 29, true)
-console.log(arr)
-swap(arr, 0, arr.length - 1)
-console.log(arr)
 
 module.exports = {
     quickSort

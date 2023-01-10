@@ -2,8 +2,9 @@
  *      Selection Sort
  */
 
-const { generateNumericArray } = require('../helpers/numeric_array_generator')
-const { swap } = require('../helpers/swap_two_array_elements')
+const { generateArray } = require('../helpers/array_generator')
+const { generateRandomizedArray } = require('../helpers/array_generator')
+const { swap } = require('../helpers/generic_swap')
 
 const selectionSort = array => {
     for (let i = 0; i < array.length; i++) {

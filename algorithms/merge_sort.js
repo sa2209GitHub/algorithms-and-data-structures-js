@@ -2,38 +2,42 @@
  *      Merge Sort
  */
 
-const { generateArray } = require('../helpers/numeric_array_generator')
-const { swap } = require('../helpers/swap_two_array_elements')
+const { generateArray } = require('../helpers/array_generator')
+const { swap } = require('../helpers/generic_swap')
 
 const mergeSort = array => {
-    if (array.length === 1) return array
+    if (array.length > 1) {
+        let mid = Math.round(array.length / 2)
+        let left = array.slice(0, mid)
+        let right = array.slice(mid)
 
-    let firstArray = array.slice(0, Math.round(array.length / 2))
-    let secondArray = array.slice(Math.round(array.length / 2))
+        mergeSort(left)
+        mergeSort(right)
 
-    firstArray = mergeSort(firstArray)
-    secondArray = mergeSort(secondArray)
+        let i = 0
+        let j = 0
+        let k = 0
 
-    return merge (firstArray, secondArray)
-}
+        while (i < left.length && j < right.length) {
+            if (left[i] <= right[j]) {
+                array[k] = left[i];     i++
+            } else {
+                array[k] = right[j];    j++ 
+            }
+            k++
+        }
 
-const merge = (firstArray, secondArray) => {
-    const mergedArray = []
-    
-    while (firstArray.length && secondArray.length) {
-        firstArray[0] < secondArray[0] ? mergedArray.push(firstArray.shift())
-                                       : mergedArray.push(secondArray.shift())
+        while (i < left.length) {
+            array[k] = left[i]
+            i++;    k++
+        }
+        while (j < right.length) {
+            array[k] = right[j]
+            j++;    k++
+        }
     }
 
-    while (firstArray.length) {
-        mergedArray.push(firstArray.shift())
-    }
-
-    while (secondArray.length) {
-        mergedArray.push(secondArray.shift())
-    }
-
-    return mergedArray
+    return array
 }
 
 module.exports = {

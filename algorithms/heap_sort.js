@@ -3,7 +3,8 @@
  */
 
 const { generateArray } = require('../helpers/array_generator')
-const { swap } = require('../helpers/swap_two_array_elements')
+const { generateRandomizedArray } = require('../helpers/randomized_array_generator')
+const { swap } = require('../helpers/generic_swap')
 
 const heapSort = array => {
     const length = array.length
@@ -53,3 +54,6 @@ const heapify = (array, size, node) => {
 module.exports = {
     heapSort
 }
+
+const arr = generateRandomizedArray(-10, 10, 99)
+console.log(heapSort(arr))

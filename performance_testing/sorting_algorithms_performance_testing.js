@@ -8,7 +8,7 @@ const { javascriptSort } = require('../algorithms/javascript_sort')
 const { insertionSort } = require('../algorithms/insertion_sort')
 const { selectionSort } = require('../algorithms/selection_sort')
 const { bubbleSort } = require('../algorithms/bubble_sort')
-const { mergeSort } = require('../algorithms/merge_sort')
+const { mergeSort, mergeSortV2 } = require('../algorithms/merge_sort')
 const { heapSort } = require('../algorithms/heap_sort')
 
 const array = generateArray(0, 9999, true)

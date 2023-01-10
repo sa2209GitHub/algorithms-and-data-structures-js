@@ -2,6 +2,9 @@
  *      Binary Search. Iterative and Recursive Solutions
  */
 
+const { generateArray } = require('../helpers/array_generator')
+const { generateRandomizedArray } = require('../helpers/randomized_array_generator')
+
 const binarySearchIterative = (array, value) => {
     let low = 0
     let high = array.length - 1

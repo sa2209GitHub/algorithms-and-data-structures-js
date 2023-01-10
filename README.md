@@ -8,3 +8,4 @@
 5.  Merge Sort: [[ code ]](./algorithms/merge_sort.js) [[ spec ]](./specs/algorithms/merge_sort.spec.js)
 6.  Heap Sort: [[ code ]](./algorithms/heap_sort.js) [[ specs ]](./specs/algorithms/heap_sort.spec.js)
 7.  JavaScript Sort: [[ code ]](./algorithms/javascript_sort.js) [[ specs ]](./specs/algorithms/javascript_sort.spec.js)
+8.  Quick Sort: [[ code ]](./algorithms/quick_sort.js) [[ spec ]](./specs//algorithms/quick_sort.spec.js)

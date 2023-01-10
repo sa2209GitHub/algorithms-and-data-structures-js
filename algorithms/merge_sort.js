@@ -2,7 +2,8 @@
  *      Merge Sort
  */
 
-const { generateNumericArray } = require('../helpers/numeric_array_generator')
+const { generateArray } = require('../helpers/numeric_array_generator')
+const { swap } = require('../helpers/swap_two_array_elements')
 
 const mergeSort = array => {
     if (array.length === 1) return array

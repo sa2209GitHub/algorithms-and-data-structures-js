@@ -7,3 +7,4 @@
 4.  Bubble Sort: [[ code ]](./algorithms/bubble_sort.js) [[ spec ]](./specs/algorithms/bubble_sort.spec.js)
 5.  Merge Sort: [[ code ]](./algorithms/merge_sort.js) [[ spec ]](./specs/algorithms/merge_sort.spec.js)
 6.  Heap Sort: [[ code ]](./algorithms/heap_sort.js) [[ specs ]](./specs/algorithms/heap_sort.spec.js)
+7.  JavaScript Sort: [[ code ]](./algorithms/javascript_sort.js) [[ specs ]](./specs/algorithms/javascript_sort.spec.js)

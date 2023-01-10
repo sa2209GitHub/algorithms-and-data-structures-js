@@ -3,6 +3,7 @@
  */
 
 const { generateArray } = require('../helpers/array_generator')
+const { swap } = require('../helpers/swap_two_array_elements')
 
 const heapSort = array => {
     const length = array.length
@@ -14,7 +15,7 @@ const heapSort = array => {
 
     // One by one extract an element from heap
     for (let i = length - 1; i > 0; i--) {
-        [ array[0], array[i] ] = [ array[i], array[0] ]
+        swap(array, 0, i)
 
         // Call max heapify on the reduced heap
         heapify(array, i, 0)
@@ -42,7 +43,7 @@ const heapify = (array, size, node) => {
 
     // If max is not root
     if (max !== node) {
-        [ array[node], array[max] ] = [ array[max], array[node] ]
+        swap(array, node, max)
 
         // Recursively heapify the affected sub-tree
         heapify(array, size, max)

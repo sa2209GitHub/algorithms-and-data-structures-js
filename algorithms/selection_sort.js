@@ -3,6 +3,7 @@
  */
 
 const { generateNumericArray } = require('../helpers/numeric_array_generator')
+const { swap } = require('../helpers/swap_two_array_elements')
 
 const selectionSort = array => {
     for (let i = 0; i < array.length; i++) {
@@ -12,7 +13,7 @@ const selectionSort = array => {
             if (array[j] < array[min]) min = j
         }
 
-        if (min != i) [ array[i], array[min] ] = [ array[min], array[i] ]
+        if (min != i) swap(array, i, min)
     }
 
     return array

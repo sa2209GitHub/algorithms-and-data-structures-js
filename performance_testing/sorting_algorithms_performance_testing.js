@@ -10,7 +10,7 @@ const { selectionSort } = require('../algorithms/selection_sort')
 const { bubbleSort } = require('../algorithms/bubble_sort')
 const { mergeSort } = require('../algorithms/merge_sort')
 const { heapSort } = require('../algorithms/heap_sort')
-const { quickSort, quickSortV2, quickSortV3 } = require('../algorithms/quick_sort')
+const { quickSort, quickSortV2, quickSortV3, quickSortV4 } = require('../algorithms/quick_sort')
 
 const array = generateArray(0, 9999, true)
 
@@ -31,3 +31,4 @@ testSortingAlgorithmsPerformance('Heap sort:', heapSort, ...array)
 testSortingAlgorithmsPerformance('Quick sort (v1):', quickSort, ...array)
 testSortingAlgorithmsPerformance('Quick sort (v2):', quickSortV2, ...array)
 testSortingAlgorithmsPerformance('Quick sort (v3):', quickSortV3, ...array)
+testSortingAlgorithmsPerformance('Quick sort (v4):', quickSortV4, ...array)

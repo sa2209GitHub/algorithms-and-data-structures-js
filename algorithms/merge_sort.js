@@ -3,6 +3,7 @@
  */
 
 const { generateArray } = require('../helpers/array_generator')
+const { generateRandomizedArray } = require('../helpers/randomized_array_generator')
 const { swap } = require('../helpers/generic_swap')
 
 const mergeSort = array => {
@@ -14,9 +15,7 @@ const mergeSort = array => {
         mergeSort(left)
         mergeSort(right)
 
-        let i = 0
-        let j = 0
-        let k = 0
+        let i = 0;  let j = 0; let k = 0
 
         while (i < left.length && j < right.length) {
             if (left[i] <= right[j]) {

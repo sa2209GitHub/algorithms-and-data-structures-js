@@ -3,7 +3,7 @@
  */
 
 const { generateArray } = require('../helpers/array_generator')
-const { generateRandomizedArray } = require('../helpers/array_generator')
+const { generateRandomizedArray } = require('../helpers/randomized_array_generator')
 const { swap } = require('../helpers/generic_swap')
 
 const selectionSort = array => {

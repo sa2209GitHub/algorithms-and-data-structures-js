@@ -1,18 +1,18 @@
 /**
- *      Performance Testing
+ *      Sorting Algorithms. Performance Testing
  */
 
 const { generateArray } = require('../helpers/array_generator')
-
+const { generateRandomizedArray } = require('../helpers/randomized_array_generator')
 const { javascriptSort } = require('../algorithms/javascript_sort')
 const { insertionSort } = require('../algorithms/insertion_sort')
 const { selectionSort } = require('../algorithms/selection_sort')
-const { bubbleSort } = require('../algorithms/bubble_sort')
+const { bubbleSort, bubbleSortV2, bubbleSortV3 } = require('../algorithms/bubble_sort')
 const { mergeSort } = require('../algorithms/merge_sort')
 const { heapSort } = require('../algorithms/heap_sort')
-const { quickSort, quickSortV2, quickSortV3, quickSortV4 } = require('../algorithms/quick_sort')
+const { quickSort, quickSortV2 } = require('../algorithms/quick_sort')
 
-const array = generateArray(0, 9999, true)
+const array = generateRandomizedArray(0, 9999, 9999)
 
 const testSortingAlgorithmsPerformance = (description, fn, ...args) => {
     const clone = Array.from(args)
@@ -22,13 +22,13 @@ const testSortingAlgorithmsPerformance = (description, fn, ...args) => {
     console.log(description, duration.toFixed(2), 'ms')
 }
 
-testSortingAlgorithmsPerformance('JavaScript sort:', javascriptSort, ...array)
-testSortingAlgorithmsPerformance('Insertion sort:', insertionSort, ...array)
-testSortingAlgorithmsPerformance('Selection sort:', selectionSort, ...array)
-testSortingAlgorithmsPerformance('Bubble sort:', bubbleSort, ...array)
-testSortingAlgorithmsPerformance('Merge sort:', mergeSort, ...array)
-testSortingAlgorithmsPerformance('Heap sort:', heapSort, ...array)
-testSortingAlgorithmsPerformance('Quick sort (v1):', quickSort, ...array)
-testSortingAlgorithmsPerformance('Quick sort (v2):', quickSortV2, ...array)
-testSortingAlgorithmsPerformance('Quick sort (v3):', quickSortV3, ...array)
-testSortingAlgorithmsPerformance('Quick sort (v4):', quickSortV4, ...array)
+testSortingAlgorithmsPerformance('javascriptSort() :', javascriptSort, ...array)
+testSortingAlgorithmsPerformance('insertionSort() :', insertionSort, ...array)
+testSortingAlgorithmsPerformance('* selectionSort() :', selectionSort, ...array)
+testSortingAlgorithmsPerformance('bubbleSort() :', bubbleSort, ...array)
+testSortingAlgorithmsPerformance('bubbleSortV2() :', bubbleSortV2, ...array)
+testSortingAlgorithmsPerformance('bubbleSortV3() :', bubbleSortV3, ...array)
+testSortingAlgorithmsPerformance('* mergeSort() :', mergeSort, ...array)
+testSortingAlgorithmsPerformance('* heapSort() :', heapSort, ...array)
+testSortingAlgorithmsPerformance('quickSort() :', quickSort, ...array)
+testSortingAlgorithmsPerformance('quickSortV2() :', quickSortV2, ...array)
